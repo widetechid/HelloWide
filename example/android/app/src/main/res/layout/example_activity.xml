@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExampleActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/wideBlue"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18dp"
+            android:layout_marginVertical="20dp"
+            android:text="WideKYC Example"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/startMobileSdk"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/montserrat"
+            android:background="@drawable/wkyc_layout_input_bg"
+            android:backgroundTint="@color/wideBlue"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:onClick="startMobileSdk"
+            android:text="Start Mobile SDK"/>
+
+        <Button
+            android:id="@+id/startApiInterface"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/montserrat"
+            android:background="@drawable/wkyc_layout_input_bg"
+            android:backgroundTint="@color/wideBlue"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:onClick="startApiInterface"
+            android:text="Start API Interface"/>
+
+    </LinearLayout>
+</FrameLayout>
