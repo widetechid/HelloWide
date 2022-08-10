@@ -6,10 +6,11 @@ dependencyResolutionManagement {
         maven {
             url 'https://maven.primecash.co.id/repository/maven-releases/'
         }
+        maven { url 'https://www.jitpack.io' }
         flatDir {
             dirs 'libs'
         }
     }
 }
-rootProject.name = "WideKYC SDK Example"
+rootProject.name = "HelloWide SDK Example"
 include ':app'
