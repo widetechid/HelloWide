@@ -111,7 +111,7 @@ public class HelloWideMessagingService extends FirebaseMessagingService {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intent.putExtra("pushMessage", data.toString());
             intent.putExtra(PushIntentService.NOTIFICATION_ID, notificationId);
-            PendingIntent pIntent = PendingIntent.getService(context, notificationId, intent, PendingIntent.FLAG_IMMUTABLE);
+            PendingIntent pIntent = PendingIntent.getService(context, notificationId, intent, PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_MUTABLE);
 
             //accept action
             Intent actionIntentA = new Intent(context, IncomingCallService.class);
@@ -120,7 +120,7 @@ public class HelloWideMessagingService extends FirebaseMessagingService {
             actionIntentA.putExtra("pushMessage", data.toString());
             actionIntentA.putExtra(IncomingCallService.EXTRA_DATA, Helper.ACTION_ACCEPT_CALL);
             actionIntentA.putExtra(IncomingCallService.NOTIFICATION_ID, notificationId);
-            PendingIntent pActionA = PendingIntent.getBroadcast(context,0,actionIntentA,PendingIntent.FLAG_MUTABLE);
+            PendingIntent pActionA = PendingIntent.getBroadcast(context,0,actionIntentA, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE);
 
             //reject action
             Intent actionIntentR = new Intent(context, IncomingCallService.class);
@@ -129,7 +129,7 @@ public class HelloWideMessagingService extends FirebaseMessagingService {
             actionIntentR.putExtra("pushMessage", data.toString());
             actionIntentR.putExtra(IncomingCallService.EXTRA_DATA, Helper.ACTION_REJECT_CALL);
             actionIntentR.putExtra(IncomingCallService.NOTIFICATION_ID, notificationId);
-            PendingIntent pActionR = PendingIntent.getBroadcast(context,0,actionIntentR,PendingIntent.FLAG_MUTABLE);
+            PendingIntent pActionR = PendingIntent.getBroadcast(context,0,actionIntentR,PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE);
 
             //for add button action
             NotificationCompat.Action actionA = new NotificationCompat.Action(R.drawable.ic_call, "accept", pActionA);
@@ -172,7 +172,7 @@ public class HelloWideMessagingService extends FirebaseMessagingService {
         missedIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         missedIntent.putExtra("missedCallNotification", true);
         missedIntent.putExtra(PushIntentService.NOTIFICATION_ID, notificationId);
-        PendingIntent missedPendingIntent = PendingIntent.getService(context, notificationId, missedIntent, PendingIntent.FLAG_IMMUTABLE);
+        PendingIntent missedPendingIntent = PendingIntent.getService(context, notificationId, missedIntent, PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_MUTABLE);
 
         Notification missedCallNotification = NotificationUtil.createNotification(context, missedPendingIntent, title, body, R.drawable.ic_cob_notification, context.getResources().getColor(R.color.backgroundColor), CHANNEL_ID);
         manager.notify(notificationId, missedCallNotification);

@@ -22,7 +22,7 @@
             android:name="com.wide.mobile.hwdemo.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:launchMode="singleTop"
+            android:launchMode="singleTask"
             android:theme="@style/Theme.HWDemo.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,6 +30,7 @@
             </intent-filter>
         </activity>
 
+        <receiver android:name=".firebase.IncomingCallService" />
         <service android:name=".firebase.PushIntentService" />
         <service
             android:name=".firebase.HelloWideMessagingService"

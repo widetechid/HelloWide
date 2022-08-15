@@ -64,12 +64,11 @@ public class Helper {
                     if(action.equalsIgnoreCase(ACTION_ACCEPT_CALL)){
                         Logger.d(TAG, "Receiving pushIntentService from videoCallNotification accepted action");
                         HelloWide helloWide = HelloWide.getInstance(context);
-                        helloWide.incomingCall(Constants.CALL_TYPE_VIDEO, UUID.randomUUID().toString(), "Call Center");
+                        helloWide.incomingCall(pushContent.getString("callType"), pushContent.getString("roomName"), pushContent.getString("callerName"));
                         PushIntentService.pushMessage = null;
                     }
                     else if(action.equalsIgnoreCase(ACTION_INCOMING_CALL)){
                         Logger.d(TAG, "Receiving pushIntentService from videoCallNotification pressed");
-                        Helper.stopMissedCallTimer();
                         HelloWide helloWide = HelloWide.getInstance(context);
                         helloWide.incomingCall(pushContent.getString("callType"), pushContent.getString("roomName"), pushContent.getString("callerName"));
                         PushIntentService.pushMessage = null;

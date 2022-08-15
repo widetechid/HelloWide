@@ -56,8 +56,7 @@ public class PushIntentService extends IntentService {
         if("firstLaunch".equals(MainActivity.appState)){
             Logger.d(TAG, "Waking-up the app");
             intent = getPackageManager().getLaunchIntentForPackage(BuildConfig.APPLICATION_ID);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            getApplication().startActivity(intent);
+            startActivity(intent);
         }
         else {
             helper.checkPushIntentService();
