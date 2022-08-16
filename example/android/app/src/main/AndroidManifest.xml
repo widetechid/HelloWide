@@ -24,11 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <receiver android:name=".firebase.IncomingCallService" />
-        <service android:name=".firebase.PushIntentService" />
         <service
-            android:name=".firebase.HelloWideMessagingService"
+            android:name=".firebase.MyMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

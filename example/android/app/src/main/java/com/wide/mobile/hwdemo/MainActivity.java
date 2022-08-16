@@ -8,16 +8,16 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.wide.mobile.hellowide.api.Constants;
+import com.wide.mobile.hellowide.api.HWCallCompact;
 import com.wide.mobile.hellowide.api.HelloWide;
 import com.wide.mobile.hellowide.core.utils.Logger;
-import com.wide.mobile.hwdemo.core.Helper;
+import com.wide.mobile.hwdemo.firebase.MyMessagingService;
 
 import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "MainActivity";
-    public static String appState = "firstLaunch";
-    private Helper helper;
+
     private Context context;
     private ImageView callButton;
     private ImageView incomingButton;
@@ -29,22 +29,21 @@ public class MainActivity extends AppCompatActivity {
         this.context = this;
 
         initActivity();
-        helper = new Helper(this);
-        Logger.d("DEVICE_TOKEN", helper.getDeviceToken());
-        helper.checkPushIntentService();
+        Logger.d("DEVICE_TOKEN", MyMessagingService.getToken(this));
+        HWCallCompact.checkCallService(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        appState = "background";
+        HWCallCompact.notifyAppOnBackground();
         Logger.d(TAG, "Application on background");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        appState = "foreground";
+        HWCallCompact.notifyAppOnForeground();
         Logger.d(TAG, "Application on foreground");
     }
 
@@ -63,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         incomingButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 HelloWide helloWide = HelloWide.getInstance(context);
-                helloWide.incomingCall(Constants.CALL_TYPE_VIDEO, UUID.randomUUID().toString(), "Call Center");
+                helloWide.incomingCall(Constants.NOTIFICATION_PRESS, Constants.CALL_TYPE_VIDEO, UUID.randomUUID().toString(), "Call Center");
             }
         });
         videoCallButton.setOnClickListener(new View.OnClickListener() {
