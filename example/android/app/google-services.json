@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1071499365652",
+    "project_id": "hellowide-b6468",
+    "storage_bucket": "hellowide-b6468.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071499365652:android:855bd6e087ab0716c30601",
+        "android_client_info": {
+          "package_name": "com.wide.mobile.hwdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1071499365652-lstdb4ih4kf6tcs0mihu7odo4hnbpnqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7DuliLsWgLKxuHCMbe5XlZNW_JT237Tg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1071499365652-lstdb4ih4kf6tcs0mihu7odo4hnbpnqi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
