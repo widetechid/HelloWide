@@ -21,6 +21,32 @@
             android:textStyle="bold"
             android:layout_margin="50dp"/>
     </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical"
+        android:layout_marginTop="130dp"
+        android:layout_marginHorizontal="30dp"
+        tools:ignore="UselessParent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="FCM Token : "
+            android:textStyle="bold"
+            android:textSize="13dp"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:id="@+id/fcmToken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:textSize="13dp"/>
+    </LinearLayout>
     <com.google.android.flexbox.FlexboxLayout
         android:id="@+id/call_action_layout"
         android:layout_width="match_parent"

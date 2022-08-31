@@ -1,9 +1,12 @@
 package com.wide.mobile.hwdemo;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private Context context;
     private ImageView callButton;
     private ImageView videoCallButton;
+    private TextView fcmToken;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
         this.context = this;
 
         initActivity();
-        Logger.d("DEVICE_TOKEN", MyMessagingService.getToken(this));
+        String token = MyMessagingService.getToken(this);
+        fcmToken.setText(token);
+        Logger.d("FCM_TOKEN", token);
 
         HWPermissionManager hwpm = new HWPermissionManager(this);
         hwpm.requestPermission( new HWPermissionCallback() {
@@ -67,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
         callButton = findViewById(R.id.call_button);
         videoCallButton = findViewById(R.id.video_call_button);
+        fcmToken = findViewById(R.id.fcmToken);
 
         callButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -78,6 +85,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 HelloWide helloWide = HelloWide.getInstance(context);
                 helloWide.outgoingCall(HWConstants.CALL_TYPE_VIDEO, "Call Center");
+            }
+        });
+        fcmToken.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clip = ClipData.newPlainText("FCM Token", fcmToken.getText());
+                clipboard.setPrimaryClip(clip);
+                Toast.makeText(MainActivity.this, "Saved to clip board", Toast.LENGTH_SHORT).show();
             }
         });
     }
