@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
         android:orientation="horizontal"
-        app:justifyContent="space_around"
+        app:justifyContent="space_between"
         tools:ignore="UselessParent">
         <ImageView
             android:id="@+id/call_button"
@@ -35,20 +35,13 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/bg_call_cs"
             android:layout_gravity="left"
-            android:layout_margin="20dp"/>
-        <ImageView
-            android:id="@+id/incoming_button"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            app:srcCompat="@drawable/bg_call_accept"
-            android:layout_gravity="left"
-            android:layout_margin="20dp"/>
+            android:layout_margin="40dp"/>
         <ImageView
             android:id="@+id/video_call_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/bg_video_call_cs"
             android:layout_gravity="right"
-            android:layout_margin="20dp"/>
+            android:layout_margin="40dp"/>
     </com.google.android.flexbox.FlexboxLayout>
 </FrameLayout>

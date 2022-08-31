@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
     private Context context;
     private ImageView callButton;
-    private ImageView incomingButton;
     private ImageView videoCallButton;
 
     @Override
@@ -67,19 +66,12 @@ public class MainActivity extends AppCompatActivity {
     private void initActivity(){
         setContentView(R.layout.main_activity);
         callButton = findViewById(R.id.call_button);
-        incomingButton = findViewById(R.id.incoming_button);
         videoCallButton = findViewById(R.id.video_call_button);
 
         callButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 HelloWide helloWide = HelloWide.getInstance(context);
                 helloWide.outgoingCall(HWConstants.CALL_TYPE_VOICE, "Call Center");
-            }
-        });
-        incomingButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                HelloWide helloWide = HelloWide.getInstance(context);
-                helloWide.incomingCall(HWConstants.NOTIFICATION_PRESS, HWConstants.CALL_TYPE_VIDEO, UUID.randomUUID().toString(), "Call Center");
             }
         });
         videoCallButton.setOnClickListener(new View.OnClickListener() {
