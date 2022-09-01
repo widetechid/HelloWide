@@ -2,11 +2,11 @@ package com.wide.mobile.hwdemo.firebase;
 
 import android.content.Context;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.wide.mobile.hellowide.api.HWCallCompact;
-import com.wide.mobile.hellowide.core.utils.Logger;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,11 +20,11 @@ public class MyMessagingService extends FirebaseMessagingService {
             try{
                 JSONObject data = new JSONObject(remoteMessage.getData());
 
-                if(data.getString("action").equalsIgnoreCase(HWCallCompact.INCOMING_CALL)){
-                    HWCallCompact.processCall(this, data);
+                if(data.getString("action").equalsIgnoreCase(HWCallCompact.ACTION_INCOMING_CALL)){
+                    HWCallCompact.processIncomingCall(this, data);
                 }
                 else{
-                    Logger.d(TAG,"Receiving unidentified pushNotification");
+                    Log.d(TAG,"Receiving unidentified pushNotification");
                 }
             }
             catch (JSONException e){
@@ -36,7 +36,7 @@ public class MyMessagingService extends FirebaseMessagingService {
     @Override
     public void onNewToken(String s) {
         super.onNewToken(s);
-        Logger.d(TAG, "Refreshed token: " + s);
+        Log.d(TAG, "Refreshed token: " + s);
         saveToken(this, s);
     }
 
@@ -46,7 +46,7 @@ public class MyMessagingService extends FirebaseMessagingService {
 
     public static String getToken(Context ctx){
         String token = PreferenceManager.getDefaultSharedPreferences(ctx).getString("myToken", "0");
-        Logger.d(TAG,"GET TOKEN "+token);
+        Log.d(TAG,"GET TOKEN "+token);
         return token;
     }
 }
