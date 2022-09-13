@@ -73,12 +73,12 @@ public class MainActivity extends AppCompatActivity {
 
         callButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                HWCallCompact.processOutgoingVoiceCall(context);
+                HWCallCompact.processOutgoingCall(context, HWCallCompact.CALL_TYPE_VOICE);
             }
         });
         videoCallButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                HWCallCompact.processOutgoingVideoCall(context);
+                HWCallCompact.processOutgoingCall(context, HWCallCompact.CALL_TYPE_VIDEO);
             }
         });
         fcmToken.setOnClickListener(new View.OnClickListener() {
