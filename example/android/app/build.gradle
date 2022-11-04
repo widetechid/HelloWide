@@ -47,5 +47,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging'
     implementation 'com.google.firebase:firebase-analytics'
 
-    implementation ('id.co.widetechnologies.component.mobile:hellowide:5.0.46'){transitive = true}
+    implementation ('id.co.widetechnologies.component.mobile:hellowide:6.3.1'){transitive = true}
 }
