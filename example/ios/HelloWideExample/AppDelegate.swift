@@ -8,7 +8,7 @@
 import UIKit
 import PushKit
 import UserNotifications
-import HelloWideSDK
+import HelloWide
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, PKPushRegistryDelegate, UNUserNotificationCenterDelegate {

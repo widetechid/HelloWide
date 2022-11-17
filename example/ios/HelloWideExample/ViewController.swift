@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import HelloWideSDK
+import HelloWide
 
 class ViewController: UIViewController {
     var voipTokenTextView = UITextView()

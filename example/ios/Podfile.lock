@@ -1,15 +1,39 @@
 PODS:
-  - HelloWide (5.0.6)
+  - Giphy (2.1.20):
+    - libwebp
+  - HelloWide (6.2.0):
+    - Giphy (= 2.1.20)
+    - JitsiWebRTC (~> 106.0.0)
+    - SocketRocket
+  - JitsiWebRTC (106.0.0)
+  - libwebp (1.2.4):
+    - libwebp/demux (= 1.2.4)
+    - libwebp/mux (= 1.2.4)
+    - libwebp/webp (= 1.2.4)
+  - libwebp/demux (1.2.4):
+    - libwebp/webp
+  - libwebp/mux (1.2.4):
+    - libwebp/demux
+  - libwebp/webp (1.2.4)
+  - SocketRocket (0.6.0)
 
 DEPENDENCIES:
   - HelloWide
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Giphy
     - HelloWide
+    - JitsiWebRTC
+    - libwebp
+    - SocketRocket
 
 SPEC CHECKSUMS:
-  HelloWide: 8ce3c17ee1be7c0604c1d29b3158e303cf98278e
+  Giphy: b6d5087521d251bb8c99cdc0eb07bbdf86d142d5
+  HelloWide: 5fffcac5f7fa1af8bacf4e2e2b9f6789d66e5d17
+  JitsiWebRTC: f441eb0e2d67f0588bf24e21c5162e97342714fb
+  libwebp: f62cb61d0a484ba548448a4bd52aabf150ff6eef
+  SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
 
 PODFILE CHECKSUM: 3155a89135c7a30857ed61260fb54a3a78aaa111
 
