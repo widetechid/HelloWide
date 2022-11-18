@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PKPushRegistryDelegate, U
     }
     
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.portrait
+        return HWCallCompact.sharedInstance().application(application, supportedInterfaceOrientationsFor: window)
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
