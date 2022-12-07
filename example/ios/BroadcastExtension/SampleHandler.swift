@@ -2,7 +2,8 @@
 //  SampleHandler.swift
 //  BroadcastExtension
 //
-//  Created by Wijaya, Ardy on 08/09/22.
+//  Created by Wide Technologies Indonesia, PT on 08/09/22.
+//  Copyright © 2022 Wide Technologies Indonesia, PT. All rights reserved.
 //
 
 import ReplayKit
