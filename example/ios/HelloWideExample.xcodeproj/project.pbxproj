@@ -24,7 +24,7 @@
 		B6D8A3A628C98FBF004660A9 /* SampleUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D8A3A228C98FBF004660A9 /* SampleUploader.swift */; };
 		B6D8A3A728C98FBF004660A9 /* SocketConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D8A3A328C98FBF004660A9 /* SocketConnection.swift */; };
 		B6EF652128C599F800B12D91 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6EF652028C599F800B12D91 /* PushKit.framework */; };
-		E44C5AC7F617557E6487A750 /* Pods_HelloWideExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC35221E71805B056894F985 /* Pods_HelloWideExample.framework */; };
+		D86847F9025E3BACA47FC6E1 /* Pods_HelloWideExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3276CEC6FCEF965D841C590 /* Pods_HelloWideExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +52,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0EA44093426EF2B9D00882F1 /* Pods-HelloWideExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWideExample.debug.xcconfig"; path = "Target Support Files/Pods-HelloWideExample/Pods-HelloWideExample.debug.xcconfig"; sourceTree = "<group>"; };
+		151E561EC55038E75FE2C676 /* Pods-HelloWideExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWideExample.release.xcconfig"; path = "Target Support Files/Pods-HelloWideExample/Pods-HelloWideExample.release.xcconfig"; sourceTree = "<group>"; };
 		B61426D428C077B200536C1E /* HelloWideExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWideExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61426D728C077B200536C1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B61426DB28C077B200536C1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,11 +75,10 @@
 		B6D8A3A128C98FBF004660A9 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		B6D8A3A228C98FBF004660A9 /* SampleUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleUploader.swift; sourceTree = "<group>"; };
 		B6D8A3A328C98FBF004660A9 /* SocketConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketConnection.swift; sourceTree = "<group>"; };
+		B6E2067A293F3DCE00D01411 /* HelloWide.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = HelloWide.xcframework; sourceTree = "<group>"; };
 		B6EF651E28C599F200B12D91 /* CallKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CallKit.framework; path = System/Library/Frameworks/CallKit.framework; sourceTree = SDKROOT; };
 		B6EF652028C599F800B12D91 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
-		C48CB0FA6CCA3987DE75D142 /* Pods-HelloWideExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWideExample.release.xcconfig"; path = "Target Support Files/Pods-HelloWideExample/Pods-HelloWideExample.release.xcconfig"; sourceTree = "<group>"; };
-		CC35221E71805B056894F985 /* Pods_HelloWideExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWideExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDFA7F639F2E5B3D0BEDB727 /* Pods-HelloWideExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWideExample.debug.xcconfig"; path = "Target Support Files/Pods-HelloWideExample/Pods-HelloWideExample.debug.xcconfig"; sourceTree = "<group>"; };
+		D3276CEC6FCEF965D841C590 /* Pods_HelloWideExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWideExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +88,7 @@
 			files = (
 				B681A80128CEE44C00453B84 /* UserNotifications.framework in Frameworks */,
 				B6EF652128C599F800B12D91 /* PushKit.framework in Frameworks */,
-				E44C5AC7F617557E6487A750 /* Pods_HelloWideExample.framework in Frameworks */,
+				D86847F9025E3BACA47FC6E1 /* Pods_HelloWideExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,11 +106,12 @@
 		7C07835E17432317F51B0A16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6E2067A293F3DCE00D01411 /* HelloWide.xcframework */,
 				B681A80028CEE44C00453B84 /* UserNotifications.framework */,
 				B6EF652028C599F800B12D91 /* PushKit.framework */,
 				B6EF651E28C599F200B12D91 /* CallKit.framework */,
 				B6D8A39328C98D20004660A9 /* ReplayKit.framework */,
-				CC35221E71805B056894F985 /* Pods_HelloWideExample.framework */,
+				D3276CEC6FCEF965D841C590 /* Pods_HelloWideExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,8 +119,8 @@
 		A45E9101C48ABB11A7B4276A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EDFA7F639F2E5B3D0BEDB727 /* Pods-HelloWideExample.debug.xcconfig */,
-				C48CB0FA6CCA3987DE75D142 /* Pods-HelloWideExample.release.xcconfig */,
+				0EA44093426EF2B9D00882F1 /* Pods-HelloWideExample.debug.xcconfig */,
+				151E561EC55038E75FE2C676 /* Pods-HelloWideExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -197,12 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B61426E828C077B300536C1E /* Build configuration list for PBXNativeTarget "HelloWideExample" */;
 			buildPhases = (
-				36BF7D356ED2C18DCB82E989 /* [CP] Check Pods Manifest.lock */,
+				CC8C83F0707F9A8790179283 /* [CP] Check Pods Manifest.lock */,
 				B61426D028C077B200536C1E /* Sources */,
 				B61426D128C077B200536C1E /* Frameworks */,
 				B61426D228C077B200536C1E /* Resources */,
 				B6D8A39F28C98D21004660A9 /* Embed App Extensions */,
-				4C1C52F23286A3F3BC6EAC9B /* [CP] Embed Pods Frameworks */,
+				632BA1577DC23966C79385E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -291,7 +293,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		36BF7D356ED2C18DCB82E989 /* [CP] Check Pods Manifest.lock */ = {
+		632BA1577DC23966C79385E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelloWideExample/Pods-HelloWideExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelloWideExample/Pods-HelloWideExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloWideExample/Pods-HelloWideExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC8C83F0707F9A8790179283 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -311,23 +330,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4C1C52F23286A3F3BC6EAC9B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HelloWideExample/Pods-HelloWideExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HelloWideExample/Pods-HelloWideExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloWideExample/Pods-HelloWideExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -501,7 +503,7 @@
 		};
 		B61426E928C077B300536C1E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDFA7F639F2E5B3D0BEDB727 /* Pods-HelloWideExample.debug.xcconfig */;
+			baseConfigurationReference = 0EA44093426EF2B9D00882F1 /* Pods-HelloWideExample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -514,15 +516,15 @@
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HelloWideExample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "HelloWide Demo";
+				INFOPLIST_KEY_CFBundleDisplayName = HelloWideExample;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app would like to access your camera";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Local network is used for establishing Peer-to-Peer connections.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app would like to access your microphone";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -541,7 +543,7 @@
 		};
 		B61426EA28C077B300536C1E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C48CB0FA6CCA3987DE75D142 /* Pods-HelloWideExample.release.xcconfig */;
+			baseConfigurationReference = 151E561EC55038E75FE2C676 /* Pods-HelloWideExample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -554,15 +556,15 @@
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HelloWideExample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "HelloWide Demo";
+				INFOPLIST_KEY_CFBundleDisplayName = HelloWideExample;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app would like to access your camera";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Local network is used for establishing Peer-to-Peer connections.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app would like to access your microphone";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
