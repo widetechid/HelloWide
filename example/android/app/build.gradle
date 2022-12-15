@@ -31,6 +31,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     buildFeatures {
         viewBinding true
     }
@@ -47,5 +48,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging'
     implementation 'com.google.firebase:firebase-analytics'
 
-    implementation ('id.co.widetechnologies.component.mobile:hellowide:6.3.5'){transitive = true}
+    implementation ('id.co.widetechnologies.component.mobile:hellowide:7.0.2'){transitive = true}
 }
