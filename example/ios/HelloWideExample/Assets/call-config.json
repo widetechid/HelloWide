@@ -1,0 +1,10 @@
+{
+  "features": {
+    "toolbox": {
+      "audio_enabled": "Y",
+      "video_enabled": "Y",
+      "switch_camera_enabled": "Y",
+      "screen_share_enabled": "Y",
+    }
+  }
+}

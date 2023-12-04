@@ -33,16 +33,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PKPushRegistryDelegate, U
             self.registerForVoIPNotification()
         })
         
-        HWCallCompact.sharedInstance().notifyAppOnBackground()
-        
+        if (application.applicationState == .background) {
+            HWCallCompact.sharedInstance().notifyAppOnBackground()
+        }else {
+            HWCallCompact.sharedInstance().notifyAppOnForeground()
+        }
+
         return true
     }
     
-    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-        return HWCallCompact.sharedInstance().application(application, supportedInterfaceOrientationsFor: window)
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        HWCallCompact.sharedInstance().notifyAppOnForeground()
     }
     
-    func applicationDidBecomeActive(_ application: UIApplication) {
+    func applicationWillEnterForeground(_ application: UIApplication) {
         HWCallCompact.sharedInstance().notifyAppOnForeground()
     }
     
@@ -50,6 +54,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PKPushRegistryDelegate, U
         HWCallCompact.sharedInstance().notifyAppOnBackground()
     }
     
+    func applicationWillResignActive(_ application: UIApplication) {
+        HWCallCompact.sharedInstance().notifyAppOnBackground()
+    }
+
     func registerForVoIPNotification() {
         let mainQueue = DispatchQueue.main
         let voipRegistry: PKPushRegistry = PKPushRegistry(queue: mainQueue)

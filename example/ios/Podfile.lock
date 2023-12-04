@@ -1,21 +1,24 @@
 PODS:
   - Giphy (2.1.20):
     - libwebp
-  - HelloWide (7.0.0):
+  - HelloWide (8.0.1):
     - Giphy (= 2.1.20)
     - JitsiWebRTC (~> 106.0.0)
     - SocketRocket
   - JitsiWebRTC (106.0.0)
-  - libwebp (1.2.4):
-    - libwebp/demux (= 1.2.4)
-    - libwebp/mux (= 1.2.4)
-    - libwebp/webp (= 1.2.4)
-  - libwebp/demux (1.2.4):
+  - libwebp (1.3.2):
+    - libwebp/demux (= 1.3.2)
+    - libwebp/mux (= 1.3.2)
+    - libwebp/sharpyuv (= 1.3.2)
+    - libwebp/webp (= 1.3.2)
+  - libwebp/demux (1.3.2):
     - libwebp/webp
-  - libwebp/mux (1.2.4):
+  - libwebp/mux (1.3.2):
     - libwebp/demux
-  - libwebp/webp (1.2.4)
-  - SocketRocket (0.6.0)
+  - libwebp/sharpyuv (1.3.2)
+  - libwebp/webp (1.3.2):
+    - libwebp/sharpyuv
+  - SocketRocket (0.7.0)
 
 DEPENDENCIES:
   - HelloWide
@@ -30,11 +33,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Giphy: b6d5087521d251bb8c99cdc0eb07bbdf86d142d5
-  HelloWide: ab198aef8b51bb7baa1a2aca8e24f21e9e8671d2
+  HelloWide: 765f530ee469d933ce4a4f675dccded96f246292
   JitsiWebRTC: f441eb0e2d67f0588bf24e21c5162e97342714fb
-  libwebp: f62cb61d0a484ba548448a4bd52aabf150ff6eef
-  SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
+  libwebp: 1786c9f4ff8a279e4dac1e8f385004d5fc253009
+  SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
 
 PODFILE CHECKSUM: 5eb15db61f640c5e382609ed3278c8fef0254f0c
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.14.3
